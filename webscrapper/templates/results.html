@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<title>Results</title>
+
+{% endblock title %}
+
+
+{% block body %}
+<div class="container">
+        {% for table in tables %}
+        <h3>{{ table | safe }}</h3>
+        {% endfor %}
+
+</div>
+{% endblock body %}
