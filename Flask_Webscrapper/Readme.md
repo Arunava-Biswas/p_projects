@@ -20,9 +20,10 @@ This application will pull data from e-commerce site(flipkart) on the basis of t
 - ### Images of the application:
 
 - **Home page**:
+<img src="images/flask_home_page.png">
 
 
-- ** Search page**:
+- **Search page**:
+<img src="images/flask_search_page.png">
 
-
-#### Also an example of a search result is there named `**redmi_phones.csv**` file.
+#### Also an example of a search result is there named **redmi_phones.csv** file.
