@@ -1,13 +1,24 @@
 import pymongo
 import logging as lg
+import os
+
+# This is for dynamic file creation to save the logging
+path = os.getcwd() + "/Server_log"
+isExist = os.path.exists(path)
+
+if not isExist:
+    os.makedirs('Server_log')
+else:
+    pass
+
+path = os.getcwd()
 
 logger = lg.getLogger(__name__)
-logger.setLevel(lg.INFO)
+logger.setLevel(lg.DEBUG)
 formatter = lg.Formatter('%(asctime)s : %(levelname)s : %(name)s : %(message)s', '%d/%m/%Y %I:%M:%S %p')
-file_handler = lg.FileHandler('F:\\Pycharm_python\\pythonProject\\Flask_Webscrapper\\Server_log\\db_logfile.log')
+file_handler = lg.FileHandler(os.path.join(path, "Server_log", "db_logfile.log"), 'w')
 file_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
-
 
 # create connection
 def connect():
